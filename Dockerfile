@@ -2,11 +2,10 @@ FROM centos:latest
 MAINTAINER anikethulule2811@gmail.com
 
 # Install dependencies
-RUN yum install -y httpd zip unzip curl
+RUN yum install -y httpd zip unzip
 
-# Download the file with retries
-RUN curl -L -o /var/www/html/photogenic.zip --retry 5 --retry-delay 5 \
-    https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip
+# Copy pre-downloaded file
+COPY photogenic.zip /var/www/html/
 
 WORKDIR /var/www/html/
 
