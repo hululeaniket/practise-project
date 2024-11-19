@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM quay.io/centos/centos:stream8
 MAINTAINER anikethulule2811@gmail.com
 
 # Install dependencies
