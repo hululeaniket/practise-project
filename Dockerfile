@@ -1,8 +1,8 @@
-FROM centos:latest
+FROM centos:stream8
 MAINTAINER anikethulule2811@gmail.com
 
 # Install dependencies
-RUN yum install -y httpd zip unzip
+RUN yum install -y httpd zip unzip && yum clean all
 
 # Copy pre-downloaded file
 COPY photogenic.zip /var/www/html/
@@ -14,4 +14,4 @@ RUN unzip photogenic.zip && rm -rf photogenic.zip
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
-EXPOSE 80 
+EXPOSE 80
