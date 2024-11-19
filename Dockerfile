@@ -1,4 +1,4 @@
-FROM centos:stream8
+FROM centos:latest
 MAINTAINER anikethulule2811@gmail.com
 
 # Install dependencies
