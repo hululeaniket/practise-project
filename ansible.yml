@@ -11,3 +11,5 @@
           KUBECONFIG: /home/ubuntu/.kube/config
      - name: create new service
        command: kubectl apply -f /tmp/Service.yml --validate=false
+       environment:
+          KUBECONFIG: /home/ubuntu/.kube/config
