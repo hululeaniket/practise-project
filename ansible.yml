@@ -7,5 +7,7 @@
       # command: kubectl delete -f /home/ubuntu/Service.yml
      - name: create new deployment
        command: kubectl apply -f /tmp/Deployment.yml --validate=false
+       environment:
+          KUBECONFIG: /home/ubuntu/.kube/config
      - name: create new service
        command: kubectl apply -f /tmp/Service.yml --validate=false
