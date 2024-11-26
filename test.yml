@@ -1,0 +1,12 @@
+---
+- name: Debug Ansible Playbook Example
+  hosts: all
+  gather_facts: false
+  vars:
+    sample_variable: "This is a sample variable value"
+  tasks:
+    - name: Print a static message
+      debug:
+        msg: "This is a static debug message"
+
+   
