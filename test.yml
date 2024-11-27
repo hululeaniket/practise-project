@@ -7,6 +7,6 @@
   tasks:
     - name: Print a static message
       debug:
-        var: "{{result}}"
+        var: result
 
    
