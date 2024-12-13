@@ -1,12 +1,6 @@
----
-- name: Debug Ansible Playbook Example
-  hosts: all
-  gather_facts: false
-  vars:
-    sample_variable: "This is a sample variable value"
+- name: Use Access Token
+  hosts: localhost
   tasks:
-    - name: Print a static message
+    - name: Print access token
       debug:
-        var: result
-
-   
+        msg: "The access token is: {{ access_token }}"
